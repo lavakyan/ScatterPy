@@ -11,9 +11,13 @@ This module contains special mathematical functions used in the T-matrix
 calculations.
 """
 
-import numba as nb
 import numpy as np
 from scipy import special
+
+try:
+    import numba as nb
+except ImportError:
+    print('WARNING: Numba support is disabled in ScatterPy')
 
 
 # special mathematical functions
